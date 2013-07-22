@@ -39,7 +39,10 @@ int main(int argc, char *argv[]){
 				out << " \"x\": " << t[0] << ", \"y\":" << t[1] << ", \"z\":" << t[2] << ","; // Position
 				out << " \"nx\": " << t[3] << ", \"ny\":" << t[4] << ", \"nz\":" << t[5] << ","; // Normal
 				out << " \"r\": " << t[6] << ", \"g\":" << t[7] << ", \"b\":" << t[8]; // Color
-				out << "},\n";
+				if(i < vcount-1) 
+					out << "},\n";
+				else
+					out << "}\n"; // last one
 			}
 			out << "] }";
 		}
